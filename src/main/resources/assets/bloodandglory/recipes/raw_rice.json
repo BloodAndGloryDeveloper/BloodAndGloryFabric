@@ -1,0 +1,15 @@
+{
+  "type":"minecraft:crafting_shapeless",
+  "ingredients":[
+    {
+      "item":"bloodandglory:item_misc",
+      "data": 13
+    },
+    {
+      "item":"minecraft:bowl"
+    }
+  ],
+  "result":{
+    "item":"bloodandglory:raw_rice"
+  }
+}

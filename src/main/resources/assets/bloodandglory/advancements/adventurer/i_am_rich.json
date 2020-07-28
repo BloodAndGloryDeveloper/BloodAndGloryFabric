@@ -1,0 +1,40 @@
+{
+  "display":{
+    "icon":{
+      "item":"minecraft:gold_nugget"
+    },
+    "title":{
+      "translate":"advancement.bloodandglory.adventurer.i_am_rich.title"
+    },
+    "frame":"task",
+    "description":{
+      "translate":"advancement.bloodandglory.adventurer.i_am_rich.desc"
+    }
+  },
+  "parent":"bloodandglory:adventurer/root",
+  "criteria": {
+    "iron": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item":"bloodandglory:item_misc",
+            "data":0
+          },
+          {
+            "item":"bloodandglory:item_misc",
+            "data":1
+          },
+          {
+            "item":"bloodandglory:item_misc",
+            "data":2
+          },
+          {
+            "item":"bloodandglory:item_misc",
+            "data":3
+          }
+        ]
+      }
+    }
+  }
+}

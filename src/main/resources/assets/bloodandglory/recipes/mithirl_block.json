@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "bloodandglory:item_misc",
+      "data": 4
+    }
+  },
+  "result": {
+    "item": "bloodandglory:mithril_block"
+  }
+}

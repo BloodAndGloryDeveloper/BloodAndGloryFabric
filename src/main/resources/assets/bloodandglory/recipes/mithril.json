@@ -1,0 +1,12 @@
+{
+  "type":"minecraft:crafting_shapeless",
+  "ingredients":[
+    {
+      "item":"bloodandglory:mithril_block"
+    }
+  ],
+  "result":{
+    "item":"bloodandglory:item_misc",
+    "data":4
+  }
+}
