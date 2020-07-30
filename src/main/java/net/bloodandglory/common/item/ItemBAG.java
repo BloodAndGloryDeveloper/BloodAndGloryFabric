@@ -1,4 +1,4 @@
-package net.bloodandglory.item;
+package net.bloodandglory.common.item;
 
 import net.minecraft.item.Item;
 

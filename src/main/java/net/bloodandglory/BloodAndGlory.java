@@ -1,6 +1,6 @@
 package net.bloodandglory;
 
-import net.bloodandglory.registry.Registry;
+import net.bloodandglory.common.registry.Registry;
 import net.fabricmc.api.ModInitializer;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

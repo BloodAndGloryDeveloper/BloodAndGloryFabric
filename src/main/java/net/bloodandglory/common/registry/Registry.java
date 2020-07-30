@@ -1,4 +1,4 @@
-package net.bloodandglory.registry;
+package net.bloodandglory.common.registry;
 
 public class Registry {
     private Registry() { }

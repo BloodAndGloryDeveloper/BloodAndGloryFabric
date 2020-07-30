@@ -1,7 +1,6 @@
-package net.bloodandglory.registry;
+package net.bloodandglory.common.registry;
 
 import net.bloodandglory.BloodAndGlory;
-import net.fabricmc.api.ModInitializer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
