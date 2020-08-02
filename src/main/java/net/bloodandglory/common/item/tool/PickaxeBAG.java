@@ -1,0 +1,10 @@
+package net.bloodandglory.common.item.tool;
+
+import net.minecraft.item.PickaxeItem;
+import net.minecraft.item.ToolMaterial;
+
+public class PickaxeBAG extends PickaxeItem {
+    public PickaxeBAG(ToolMaterial toolMaterial,int attackDamage,float attackSpeed,Settings settings) {
+        super(toolMaterial,attackDamage,attackSpeed,settings);
+    }
+}
