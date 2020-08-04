@@ -9,7 +9,7 @@ import java.util.function.Supplier;
 
 public enum ToolMaterialBAG implements ToolMaterial {
     MITHRIL(2,1009,10.0F,
-            5.0F,30,() -> {
+            8.0F,30,() -> {
         return Ingredient.ofItems(ItemRegistry.MITHRIL);
     });
 
