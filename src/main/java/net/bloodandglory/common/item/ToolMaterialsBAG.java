@@ -7,9 +7,9 @@ import net.minecraft.util.Lazy;
 
 import java.util.function.Supplier;
 
-public enum ToolMaterialBAG implements ToolMaterial {
+public enum ToolMaterialsBAG implements ToolMaterial {
     MITHRIL(2,1009,10.0F,
-            8.0F,30,() -> {
+            4.0F,30,() -> {
         return Ingredient.ofItems(ItemRegistry.MITHRIL);
     });
 
@@ -29,7 +29,7 @@ public enum ToolMaterialBAG implements ToolMaterial {
      * @param enchantibility    附魔等级
      * @param repairIngredient  维修这个要什么
      */
-    ToolMaterialBAG(int miningLevel, int itemDurability, float miningSpeed, float attackDamage, int enchantibility, Supplier<Ingredient> repairIngredient) {
+    ToolMaterialsBAG(int miningLevel, int itemDurability, float miningSpeed, float attackDamage, int enchantibility, Supplier<Ingredient> repairIngredient) {
         this.miningLevel = miningLevel;
         this.itemDurability = itemDurability;
         this.miningSpeed = miningSpeed;

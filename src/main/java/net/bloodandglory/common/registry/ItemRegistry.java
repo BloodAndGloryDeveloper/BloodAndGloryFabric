@@ -2,10 +2,8 @@ package net.bloodandglory.common.registry;
 
 import net.bloodandglory.BloodAndGlory;
 import net.bloodandglory.client.TabBAG;
-import net.bloodandglory.common.item.ToolMaterialBAG;
-import net.bloodandglory.common.item.tool.AxeBAG;
-import net.bloodandglory.common.item.tool.PickaxeBAG;
-import net.bloodandglory.common.item.tool.SwordBAG;
+import net.bloodandglory.common.item.ToolMaterialsBAG;
+import net.bloodandglory.common.item.tool.*;
 import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
@@ -22,12 +20,11 @@ public class ItemRegistry implements IRegistry<Item> {
     public static final Set<Item> ITEMS = new HashSet<>();
 
     public static final Item MITHRIL = new Item(TabBAG.GROUP_ITEM);
-    public static final Item MITHRIL_AXE = new AxeBAG(ToolMaterialBAG.MITHRIL,6.0F
-            ,-0.9F,TabBAG.GROUP_ITEM);
-    public static final Item MITHRIL_SWORD = new SwordBAG(ToolMaterialBAG.MITHRIL,10,
-            -0.9F,TabBAG.GROUP_ITEM);
-    public static final Item MITHRIL_PICKAXE = new PickaxeBAG(ToolMaterialBAG.MITHRIL,3,
-            -0.9F,TabBAG.GROUP_ITEM);
+    public static final Item MITHRIL_AXE = new AxeBAG(ToolMaterialsBAG.MITHRIL,TabBAG.GROUP_ITEM);
+    public static final Item MITHRIL_HOE = new HoeBAG(ToolMaterialsBAG.MITHRIL,0.1F,TabBAG.GROUP_ITEM);
+    public static final Item MITHRIL_SWORD = new SwordBAG(ToolMaterialsBAG.MITHRIL,TabBAG.GROUP_ITEM);
+    public static final Item MITHRIL_SHOVEL = new ShovelBAG(ToolMaterialsBAG.MITHRIL,TabBAG.GROUP_ITEM);
+    public static final Item MITHRIL_PICKAXE = new PickaxeBAG(ToolMaterialsBAG.MITHRIL,TabBAG.GROUP_ITEM);
 
     @Override
     public void registry(Item registryThing,Identifier identifier) {
