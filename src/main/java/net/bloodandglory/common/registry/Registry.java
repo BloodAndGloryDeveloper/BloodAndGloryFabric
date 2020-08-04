@@ -7,5 +7,6 @@ public class Registry {
 
     public void registryAll() {
         ItemRegistry.INSTANCE.registryAll();
+        BlockRegistry.INSTANCE.registryAll();
     }
 }

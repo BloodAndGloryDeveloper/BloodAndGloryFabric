@@ -36,14 +36,17 @@ public class ItemRegistry implements IRegistry<Item> {
     public void registryAll() {
         for (Field field : ItemRegistry.class.getDeclaredFields()) {
             try {
+                    //获取公共对象字段并判断类型
                     if (field.get(null) instanceof Item) {
                         Item item = (Item) field.get(null);
+                        //字段名称转换成小写
                         String itemName = field.getName().toLowerCase(Locale.ENGLISH);
 
                         Identifier identifier = new Identifier(BloodAndGlory.MOD_ID,itemName);
                         registry(item,identifier);
                     }
             } catch (Exception ex) {
+                //field.get(null)会抛出异常
                 ex.printStackTrace();
             }
         }
