@@ -1,4 +1,4 @@
-package net.bloodandglory.common.item;
+package net.bloodandglory.common.item.tool;
 
 import net.bloodandglory.common.registry.ItemRegistry;
 import net.minecraft.item.ToolMaterial;
@@ -11,6 +11,10 @@ public enum ToolMaterialsBAG implements ToolMaterial {
     MITHRIL(2,1009,10.0F,
             4.0F,30,() -> {
         return Ingredient.ofItems(ItemRegistry.MITHRIL);
+    }),
+    BRONZE(1,759,7.5F,
+            3.0F,14,() -> {
+        return Ingredient.ofItems(ItemRegistry.BRONZE);
     });
 
     private final int miningLevel;

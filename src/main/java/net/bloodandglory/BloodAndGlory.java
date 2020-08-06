@@ -15,7 +15,10 @@ public class BloodAndGlory implements ModInitializer {
     @Override
     public void onInitialize() {
         logger.info("BloodAndGlory started!");
-        logger.info("OK,we are going to registered.");
         Registry.INSTANCE.registryAll();
+    }
+
+    public static Logger getLogger() {
+        return logger;
     }
 }

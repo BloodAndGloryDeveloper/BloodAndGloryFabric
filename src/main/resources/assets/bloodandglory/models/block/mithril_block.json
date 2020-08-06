@@ -1,6 +1,0 @@
-{
-  "parent":"block/cube_all",
-  "textures":{
-    "all":"bloodandglory:blocks/mithril_block"
-  }
-}

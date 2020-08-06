@@ -2,8 +2,11 @@ package net.bloodandglory.common.registry;
 
 import net.bloodandglory.BloodAndGlory;
 import net.bloodandglory.client.TabBAG;
-import net.bloodandglory.common.item.ToolMaterialsBAG;
+import net.bloodandglory.common.item.armor.ArmorMaterialsBAG;
+import net.bloodandglory.common.item.tool.ToolMaterialsBAG;
 import net.bloodandglory.common.item.tool.*;
+import net.minecraft.block.Block;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
@@ -25,6 +28,19 @@ public class ItemRegistry implements IRegistry<Item> {
     public static final Item MITHRIL_SWORD = new SwordBAG(ToolMaterialsBAG.MITHRIL,TabBAG.GROUP_ITEM);
     public static final Item MITHRIL_SHOVEL = new ShovelBAG(ToolMaterialsBAG.MITHRIL,TabBAG.GROUP_ITEM);
     public static final Item MITHRIL_PICKAXE = new PickaxeBAG(ToolMaterialsBAG.MITHRIL,TabBAG.GROUP_ITEM);
+    //Helmet——头盔，Chestplate——胸甲，Leggings——护腿，Boots——靴子
+    public static final Item MITHRIL_HELMET = new ArmorItem(ArmorMaterialsBAG.MITHRIL,EquipmentSlot.HEAD,TabBAG.GROUP_ITEM);
+    public static final Item MITHRIL_CHESTPLATE = new ArmorItem(ArmorMaterialsBAG.MITHRIL,EquipmentSlot.CHEST,TabBAG.GROUP_ITEM);
+    public static final Item MITHRIL_LEGGINGS = new ArmorItem(ArmorMaterialsBAG.MITHRIL,EquipmentSlot.LEGS,TabBAG.GROUP_ITEM);
+    public static final Item MITHRIL_BOOTS = new ArmorItem(ArmorMaterialsBAG.MITHRIL,EquipmentSlot.FEET,TabBAG.GROUP_ITEM);
+
+    public static final Item BRONZE = new Item(TabBAG.GROUP_ITEM);
+    public static final Item BRONZE_AXE = new AxeBAG(ToolMaterialsBAG.BRONZE,TabBAG.GROUP_ITEM);
+    public static final Item BRONZE_HOE = new HoeBAG(ToolMaterialsBAG.BRONZE,0.2F,TabBAG.GROUP_ITEM);
+    public static final Item BRONZE_SWORD = new SwordBAG(ToolMaterialsBAG.BRONZE,TabBAG.GROUP_ITEM);
+    public static final Item BRONZE_SHOVEL = new ShovelBAG(ToolMaterialsBAG.BRONZE,TabBAG.GROUP_ITEM);
+    public static final Item BRONZE_PICKAXE = new PickaxeBAG(ToolMaterialsBAG.BRONZE,TabBAG.GROUP_ITEM);
+    public static final Item BRONZE_HELMET = new ArmorItem(ArmorMaterialsBAG.MITHRIL,EquipmentSlot.HEAD,TabBAG.GROUP_ITEM);
 
     @Override
     public void registry(Item registryThing,Identifier identifier) {
@@ -44,6 +60,7 @@ public class ItemRegistry implements IRegistry<Item> {
 
                         Identifier identifier = new Identifier(BloodAndGlory.MOD_ID,itemName);
                         registry(item,identifier);
+                        BloodAndGlory.getLogger().info(item.getTranslationKey() + ": be done");
                     }
             } catch (Exception ex) {
                 //field.get(null)会抛出异常
@@ -51,4 +68,9 @@ public class ItemRegistry implements IRegistry<Item> {
             }
         }
     }
+
+    /*public void registryArmor(Item material,Item.Settings settings,ArmorMaterial armorMaterial) {
+        String path = material.getTranslationKey();
+        registry(new ArmorItem(armorMaterial,EquipmentSlot.HEAD,settings),new Identifier());
+    }*/
 }
